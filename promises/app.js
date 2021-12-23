@@ -25,6 +25,7 @@ let order = (work, time) => {
 // Passes an anonymous function as a work parameter.
 // .catch() only works when Promise is rejected.
 // .finally() works when Promise is Resolved or Rejected.
+// Running in sequence "Fruit was cut." 2s > "Added water and ice" another 2s
 order(() => console.log(`${stocks.fruits[1]} was cut.`), 2000)
 .then(() => {
     return order(() => console.log(`Added ${stocks.liquid[0]} and ${stocks.liquid[1]}.`), 2000)
